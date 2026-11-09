@@ -1,20 +1,21 @@
 name: system-rubygems-bundler
 
-on:
-  pull_request:
-    paths:
-      - lib/**
-      - exe/**
-      - bundler.gemspec
-      - spec/**
-      - bin/rspec
-      - bin/parallel_rspec
-      - .github/workflows/system-rubygems-bundler.yml
-
-  push:
-    branches:
-      - master
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     paths:
+#       - lib/**
+#       - exe/**
+#       - bundler.gemspec
+#       - spec/**
+#       - bin/rspec
+#       - bin/parallel_rspec
+#       - .github/workflows/system-rubygems-bundler.yml
+# 
+#   push:
+#     branches:
+#       - master
+# 
 concurrency:
   group: ci-${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true

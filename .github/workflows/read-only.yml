@@ -1,12 +1,13 @@
 name: read-only
 
-on:
-  pull_request:
-
-  push:
-    branches:
-      - master
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+# 
+#   push:
+#     branches:
+#       - master
+# 
 concurrency:
   group: ci-${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
